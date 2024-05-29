@@ -18,25 +18,24 @@ win 10 minimum
 Explique aqui um passo a passo mostrando como deve executar para ter um ambiente de desenvolvimento em execução, desde instalar e rodar o projeto.
 
 Etapas para instalar:
-
-```abra cmd na pasta back clicker e execute
+abra cmd na pasta back clicker e execute
 para instalar dependencias:
-
-npm i
-
-para rodar banco de dados:
-
-npm run dev
-
 ```
-Passo 2:
-```abra o cmd na pasta front clicker
-para instalar dependencias:
-
 npm i
+```
+para rodar banco de dados:
+```
+npm run dev
+```
 
+Passo 2:
+abra o cmd na pasta front clicker
+para instalar dependencias:
+```
+npm i
+```
 para rodar aplicaçao web:
-
+```
 npm run dev
 ```
 
