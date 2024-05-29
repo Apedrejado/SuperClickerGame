@@ -1,0 +1,29 @@
+import { FastifyInstance, FastifyPluginOptions, FastifyRequest, FastifyReply } from "fastify";
+import { CreateUserController } from "./controllers/CreateUserController";
+import { ListUserController } from "./controllers/ListUserController";
+import { DeleteuserController } from "./controllers/DeleteUserController";
+import { UpdateUserController } from "./controllers/UpdateUserController";
+
+
+export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
+
+    fastify.get("/test", async (request: FastifyRequest, reply: FastifyReply) => {
+        return{ok: true}
+    })
+    
+    fastify.post("/api/user", async (request: FastifyRequest, reply: FastifyReply) =>{
+        return new CreateUserController().handle(request,reply)
+    })
+
+    fastify.get("/api/users", async(request: FastifyRequest, reply:FastifyReply)=>{
+        return new ListUserController().handle(request,reply)
+    })    
+
+    fastify.delete("/api/delete", async (request: FastifyRequest, reply:FastifyReply)=>{
+        return new DeleteuserController().handle(request,reply)
+    })
+
+    fastify.put("/api/user", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new UpdateUserController().handle(request, reply);
+    })
+}
