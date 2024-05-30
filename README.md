@@ -69,4 +69,4 @@ Esse projeto está sob a licença (MIT) - acesse os detalhes [LICENSE.md](https:
 
 * Um agradecimento.
 * Para suporte, mande um email para giovanigsilvano@gmail.com.
-* Link para o seu linkedin [Meu linkedin](https://www.linkedin.com/in/ggsts)
+*[Meu linkedin](https://www.linkedin.com/in/ggsts)
