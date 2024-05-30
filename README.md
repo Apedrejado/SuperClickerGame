@@ -15,8 +15,6 @@ win 10 minimum
 
 ### 🔨 Guia de instalação
 
-Explique aqui um passo a passo mostrando como deve executar para ter um ambiente de desenvolvimento em execução, desde instalar e rodar o projeto.
-
 Etapas para Executar,
 abra cmd na pasta back clicker e execute
 para instalar dependencias:
