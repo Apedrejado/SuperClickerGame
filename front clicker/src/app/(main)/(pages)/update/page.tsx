@@ -71,14 +71,14 @@ function UpdateRecordPage() {
     };
 
     try {
-      const response = await api.patch(`/api/user/${selectedUser.id}`, updatedUser);
+      const response = await api.put(`/api/user?id=${selectedUser.id}`,updatedUser);
       const updatedUsers = users.map(user => user.id === updatedUser.id ? response.data : user);
       setUsers(updatedUsers);
       alert("Registro atualizado com sucesso!");
     } catch (error) {
       console.error("Erro ao atualizar registro:", error);
     }
-  }
+  }s
 
   return (
     <div className="w-full min-h-screen flex justify-center px-4" style={{ marginTop }}>

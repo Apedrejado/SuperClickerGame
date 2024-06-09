@@ -57,6 +57,9 @@ const Navbar = async (props: Props) => {
             <Link href="/settings" className="text-white text-lg">Settings</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
+            <Link href="/update" className="text-white text-lg">update</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
             <Link href="/leaderbord" className="text-white text-lg">Leaderboard</Link>
           </DropdownMenuItem>
           </DropdownMenuContent>

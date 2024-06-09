@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { CheckIcon } from "lucide-react";
-import create from 'zustand';
+import { create } from 'zustand';
 
 
 interface StoreState {
