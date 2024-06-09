@@ -78,7 +78,7 @@ function UpdateRecordPage() {
     } catch (error) {
       console.error("Erro ao atualizar registro:", error);
     }
-  }s
+  }
 
   return (
     <div className="w-full min-h-screen flex justify-center px-4" style={{ marginTop }}>
