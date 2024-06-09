@@ -39,28 +39,28 @@ const Navbar = async (props: Props) => {
         </ul>
       </nav>
       <aside className="flex items-center gap-4 md:hidden">
-        <DropdownMenu>
+      <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button><MenuIcon className="w-6 h-6"/></button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-40">
           <DropdownMenuItem>
-            <Link href="/home" className="text-white text-lg">Play Super Clicker</Link>
+            <Link href="/home" className="text-black dark:text-white text-lg">Play Super Clicker</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/record" className="text-white text-lg">Save</Link>
+            <Link href="/record" className="text-black dark:text-white text-lg">Save</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/load" className="text-white text-lg">Load</Link>
+            <Link href="/load" className="text-black dark:text-white text-lg">Load</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/settings" className="text-white text-lg">Settings</Link>
+            <Link href="/settings" className="text-black dark:text-white text-lg">Settings</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/update" className="text-white text-lg">update</Link>
+            <Link href="/update" className="text-black dark:text-white text-lg">update</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Link href="/leaderbord" className="text-white text-lg">Leaderboard</Link>
+            <Link href="/leaderbord" className="text-black dark:text-white text-lg">Leaderboard</Link>
           </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
