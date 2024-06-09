@@ -65,8 +65,7 @@ npm run dev
 
 Esse projeto está sob a licença (MIT) - acesse os detalhes [LICENSE.md](https://choosealicense.com/licenses/mit/).
 
-## 💡 Expressões de gratidão
+## 💡 Um agradecimento: Apedrejado =)
 
-* Um agradecimento.
 * Para suporte, mande um email para giovanigsilvano@gmail.com.
 * [Meu linkedin](https://www.linkedin.com/in/ggsts)
