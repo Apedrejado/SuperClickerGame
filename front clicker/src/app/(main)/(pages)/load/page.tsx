@@ -51,7 +51,7 @@ function LoadPage() {
     const name = nameRef.current?.value;
     const email = emailRef.current?.value;
     if (!name || !email) {
-      console.error("Por favor, insira o nome e o email para encontrar o usuário.");
+      alert("Por favor, insira o nome e o email para encontrar o usuário.");
       return;
     }
     const foundUser = users.find(user => user.name === name && user.email === email);
@@ -63,7 +63,7 @@ function LoadPage() {
       if (nameRef.current) nameRef.current.value = "";
       if (emailRef.current) emailRef.current.value = "";
     } else {
-      console.log("Nenhum usuário encontrado com os critérios fornecidos.");
+      alert("Nenhum usuário encontrado com os critérios fornecidos.");
     }
   }
 

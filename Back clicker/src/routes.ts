@@ -3,6 +3,8 @@ import { CreateUserController } from "./controllers/CreateUserController";
 import { ListUserController } from "./controllers/ListUserController";
 import { DeleteuserController } from "./controllers/DeleteUserController";
 import { UpdateUserController } from "./controllers/UpdateUserController";
+import { DeleteInativoController } from "./controllers/DeleteInativoController";
+import { DeleteDuplicadoController } from "./controllers/DeleteDuplicadoController";
 
 
 export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
@@ -23,7 +25,16 @@ export async function routes(fastify: FastifyInstance, options: FastifyPluginOpt
         return new DeleteuserController().handle(request,reply)
     })
 
+    fastify.delete("/api/deleteinativo", async (request: FastifyRequest, reply:FastifyReply)=>{
+        return new DeleteInativoController().handle(request,reply)
+    })
+
+    fastify.delete("/api/deleteduplicado", async (request: FastifyRequest, reply:FastifyReply)=>{
+        return new DeleteDuplicadoController().handle(request,reply)
+    })
+
     fastify.put("/api/user", async (request: FastifyRequest, reply: FastifyReply) => {
         return new UpdateUserController().handle(request, reply);
     })
 }
+

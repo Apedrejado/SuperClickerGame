@@ -15,6 +15,7 @@ const Navbar = async (props: Props) => {
             <Link href={"/"}>Clicker</Link>
           </li>
         </ul>
+        <h1></h1>
       </aside>
       <nav className="hidden md:flex items-center justify-center gap-8">
         <ul className="flex items-center gap-8 list-none">
