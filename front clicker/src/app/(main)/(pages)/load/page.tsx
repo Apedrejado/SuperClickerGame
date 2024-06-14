@@ -37,7 +37,7 @@ function LoadPage() {
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
   }, [])
-
+//QUARRY load
   async function loadUsers() {
     try {
       const response = await api.get("/api/users")
@@ -46,7 +46,6 @@ function LoadPage() {
       console.error("Erro ao carregar usuários:", error);
     }
   }
-
   function findUser() {
     const name = nameRef.current?.value;
     const email = emailRef.current?.value;
@@ -66,6 +65,7 @@ function LoadPage() {
       alert("Nenhum usuário encontrado com os critérios fornecidos.");
     }
   }
+  //QUARRY load
 
   return (
     <div className="w-full min-h-screen flex justify-center px-4" style={{ marginTop }}>

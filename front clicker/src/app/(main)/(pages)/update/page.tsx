@@ -1,7 +1,6 @@
 'use client'
 import { api } from "@/services/api";
 import { useEffect, useState, useRef, FormEvent } from "react";
-import { FiTrash } from 'react-icons/fi';
 import { useStore } from '../home/page';
 
 interface UserProp {
@@ -19,7 +18,7 @@ function UpdateRecordPage() {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   
-  const { power, value,marginTop, setMarginTop } = useStore();
+  const { power, value, marginTop, setMarginTop } = useStore();
 
   useEffect(() => {
     loadUsers();
@@ -51,10 +50,14 @@ function UpdateRecordPage() {
 
   function findUser(name: string, email: string) {
     const foundUser = users.find(user => user.name === name && user.email === email);
-    setSelectedUser(foundUser || null);
-    console.log(power)
+    if (foundUser) {
+      setSelectedUser(foundUser);
+    } else {
+      alert("Usuário não encontrado com o nome e email fornecidos.");
+      setSelectedUser(null);
+    }
   }
-
+//QUARRY Update
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (!selectedUser || !nameRef.current?.value || !emailRef.current?.value) {
@@ -71,13 +74,21 @@ function UpdateRecordPage() {
     };
 
     try {
-      const response = await api.put(`/api/user?id=${selectedUser.id}`,updatedUser);
+      const response = await api.put(`/api/user?id=${selectedUser.id}`, updatedUser);
       const updatedUsers = users.map(user => user.id === updatedUser.id ? response.data : user);
       setUsers(updatedUsers);
       alert("Registro atualizado com sucesso!");
+      resetForm();
     } catch (error) {
       console.error("Erro ao atualizar registro:", error);
     }
+  }
+//QUARRY Update
+
+  function resetForm() {
+    if (nameRef.current) nameRef.current.value = '';
+    if (emailRef.current) emailRef.current.value = '';
+    setSelectedUser(null);
   }
 
   return (
@@ -106,7 +117,7 @@ function UpdateRecordPage() {
               <p className="text-black dark:text-white"><span className="font-medium">Nome:</span> {selectedUser.name}</p>
               <p className="text-black dark:text-white"><span className="font-medium">Email:</span> {selectedUser.email}</p>
               <p className="text-black dark:text-white"><span className="font-medium">power:</span> {selectedUser.power}</p>
-              <p className="text-black dark:text-white"><span className="font-medium">value:</span> {selectedUser.value }</p>
+              <p className="text-black dark:text-white"><span className="font-medium">value:</span> {selectedUser.value}</p>
               <button type="submit" className="cursor-pointer w-full mt-4 p-2 bg-blue-500 rounded font-medium text-white">Atualizar Registro</button>
             </>
           )}
